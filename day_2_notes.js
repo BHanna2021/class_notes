@@ -11,5 +11,10 @@ To initiate a git repository
 2) Staging files for a commit - git add <file_name> OR git add . (to add all files in folder)
 git status - tells us the status of our repository
 git reset can convert back before committing to the repository if for some reason we don't want to commit all the files
+
+To commit your changes, run the following:
 git commit -m "type commit message here to provide short explanation of changes made"
+
+To view the commit use git log
+shows us commit hash, branch name, commit message, and other metadata
 */
