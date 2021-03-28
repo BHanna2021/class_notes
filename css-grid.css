@@ -1,0 +1,90 @@
+/*
+Notes on what Grid is:
+
+Similar to Flexbox - One dimension only: up OR down
+
+CSS Grid - two dimensions: up AND down!
+
+Layout mechanisms are more difficult
+
+Grid container:
+    use grid-template-columns with em, px, %, to set how wide each column will be
+    use grid-template-rows with same to determin how high each row will be
+    can use fraction units - 1fr, 2fr, etc telling it how much fractions of the page we want the column
+    can use 'repeat' command to tell it we want x number of columns at however wide each like this: grid-template-columns: repeat(4, 100px);
+    grid-auto-rows: 150px; for use when how many rows there are is unknown - all undefined rows will default to this condition
+    can use minmax(150px; auto) - with grid-auto-rows: to define the minimum and maximum height for the rows.
+    grid-row-gap: px; adds space between rows
+    grid-row-columns: px; adds space between columns
+    grid-gap: px; will set both rows and columns to the same spacing
+    grid-template-areas: "header header" - can give an item a grid-area: header; and have that item be in the header
+    can tell it more like this for two columns:
+
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "sidebar content"
+
+    This tells the grid that the item labeled as grid-area: header is a header to go across the container and the item labeled as grid-area: sidebar is an sidebar item on the left (skinnier) and the item labeled as grid-area: content will go next to sidebar item and be bigger
+Grid Items
+Grid Gaps
+Grid Tracks/Dividers
+
+prefer using grid-item level (column 1 is actually the first column, second is the space between columns, third is the next column:
+    grid-column-start: 1;
+    grid-column-end: 3;  These would give us the full header - or you can use -1 to span the page
+    shortcut of this is grid-column: 1 / -1; or : span 2; (will take up 2 columns
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-row: span 2; for two rows for short typing
+
+    align and justify items
+    justify and align content
+
+    in container: justify-content: center; will center the items within the container - start or end
+    align-content will adjust up and down as long as there is a height declared
+    justify content can also use stretch, space-around
+
+    justify-items: center; will center them within their columns - default is stretch
+    align-items: center; will center them within their rows - default is stretch
+
+    inside items:
+    align-self: start; will align that item to the top of the row
+    justify-self: center; will center the item in its column
+
+
+
+
+*/
+
+body {
+    background-color: lightslategray;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item-1 {
+    background-color: mediumaquamarine;
+}
+
+.grid-item-2 {
+    background-color: mediumpurple;
+}
+
+.grid-item-3 {
+    background-color: moccasin;
+}
+
+.grid-item-4 {
+    background-color: olivedrab;
+}
+
+.grid-item-5 {
+    background-color: palegoldenrod;
+}
+
+.grid-item-6 {
+    background-color: peachpuff;
+}

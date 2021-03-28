@@ -1,0 +1,79 @@
+/*
+Notes on flexbox work:
+Main Axis is horizontally through the middle of the flexbox container
+Cross Axis is vertically through the middle of the flexbox container
+
+flexbox-container with display: flex; allows the container to shrink and grow with the individual items in the container depending on browser width.
+
+flex-direction is column or row - if in column, then the main axis and cross axis flip.
+
+justify-content is used to tell browser where to place the flexbox items inside the container: 
+flex-start - means start at the beginning of the Main Axis; 
+center - means the items will be centered on the Main Axis; 
+space-between - means the extra space in the flexcontainer will be distributed between the items.
+space-around - means even distribution of extra space all the way around the items.
+
+align-items property:
+baseline - 
+center - will keep the css properties of each individual item but center each along the Cross Axis
+flex-end - 
+flex-start - means the items will align themselves at the top of the Cross Axis and be the size listed in their css properties (could be different sizes)
+inherit - 
+initial - 
+stretch - this means the items will stretch to fill the most amount of space vertically that they can in the container
+unset - 
+
+align-content property:  only for use with multi-line flex box containers (not used as much as justify-content and align-items)
+center - lines up items in the center of the container
+flex-end - lines up the items at the bottom of the container
+flex-start - lines up the items at the top of the container
+inherit - 
+initial - 
+space-around - 
+space-between - 
+stretch - 
+unset - 
+
+flex-wrap: wrap; will cause the items to wrap when the browser shrinks instead of shrinking the items themselves as much
+
+flexbox item properties allow overriding of container properties or add additional formatting to the individual items:
+
+flex-shrink: 0 - means don't allow this item to shrink
+
+flex-grow: 1 - will tell the item to grow bigger when there is more space (specifically it caused the third flex item to take up all the extra space) this is similar to z-index in that the number can be increased and will allow an item set to a higher number to take up more space than an item with a lower number.
+
+flex-basis: overrides the original width set for flexbox-items and can make them behave as if they were originally set with 0 or some other
+
+mostly just need flex-grow, flex-shrink and justify/align properties work really well for a good looking flex container
+
+align-self property is per item and works to align specific items in the container individually.
+
+order: - can be used to change the order of the flexbox items without changing the html!
+    However, not recommended much as people who use screen readers...will not follow the order, the screen reader still follows the html code to read the items on the screen.
+    Will also mess up the tab ability through the items.
+
+Shorthand for flexbox item code is flex: 1 0 0px; - first # is flexGrow; second # is flexShrink, third # is flexBasis (last number)  If only want flex grow, just leave off the second two properties...so cool!
+*/
+
+.flexbox-container {
+    display: flex;
+}
+
+.flexbox-item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+    min-height: 100px;
+}
+
+.flexbox-item-2 {
+    min-height: 200px;
+}
+
+.flexbox-item-3 {
+    min-height: 300px;
+}
