@@ -53,6 +53,9 @@ order: - can be used to change the order of the flexbox items without changing t
     Will also mess up the tab ability through the items.
 
 Shorthand for flexbox item code is flex: 1 0 0px; - first # is flexGrow; second # is flexShrink, third # is flexBasis (last number)  If only want flex grow, just leave off the second two properties...so cool!
+
+flex-direction: row; is default and means left to right
+flex-direction: row-reverse; means right to left  can also be done when flex is columns, just column-reverse instead of row
 */
 
 .flexbox-container {
