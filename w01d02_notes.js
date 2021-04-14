@@ -1,6 +1,6 @@
 // Git
 // Version control system designed to keep chronological timeline of all of your code changes.
-/*To travers file system in terminal:
+/*To traverse file system in terminal:
 cd name_of_folder moves you down
 cd .. moves you up
 ls lists items inside the folder
